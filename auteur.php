@@ -1,4 +1,5 @@
 <?php
+// include "livre.php";
 class Auteur{
     private string $_nom;
     private string $_prenom;
@@ -22,13 +23,12 @@ class Auteur{
     public function afficherBibliographie(){
         $result = "";
         $result .= "<h1>Livres de $this->_prenom $this->_nom </h1>";
+        // $result .= ;
         return $result;
     }
     public function __toString(){
         return $this->_nom . $this->_prenom;
     }
 }
-$class = new Auteur("King","Stephen");
-echo $class;
-echo $class->afficherBibliographie();
+
 ?>

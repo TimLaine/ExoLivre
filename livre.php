@@ -1,12 +1,12 @@
 <?php
 class Livre{
     private string $_titre;
-    private int $_Pages;
-    private DateTime $_paru;
-    private double $_prix;
+    private int $_pages;
+    private int $_paru;
+    private int $_prix;
     private string $_auteur;
 
-    public function __construct(string $titre,int $pages,DateTime $paru, double $prix, string $auteur){
+    public function __construct(string $titre,int $pages,int $paru, int $prix, string $auteur){
         $this->_titre = $titre;
         $this->_pages = $pages;
         $this->_paru = $paru;
@@ -26,7 +26,7 @@ class Livre{
         return $this->_prix;
     }
     public function getAuteur(){
-        return $this->_titre;
+        return $this->_auteur;
     }
     public function setTitre($titre){
         $this->_titre = $titre;
@@ -42,6 +42,13 @@ class Livre{
     }
     public function setAuteur($auteur){
         $this->_titre = $auteur;
+    }
+    public function __toString(){
+        $result = "";
+        $result .= ucfirst($this->_titre);
+        $result .= " ($this->_paru) : $this->_pages pages / $this->_prix €";
+        return $result;
+        // return $this->_titre . $this->_pages . $this->_paru . $this->_prix . $this->_auteur;
     }
 }
 ?>
