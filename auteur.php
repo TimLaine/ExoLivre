@@ -1,12 +1,12 @@
 <?php
-// include "livre.php";
 class Auteur{
     private string $_nom;
     private string $_prenom;
-
+    private array $_biblio;
     public function __construct(string $nom, string $prenom){
         $this->_nom = $nom;
         $this->_prenom = $prenom;
+        $this->_biblio = [];
     }
     public function getNom(){
         return $this->_nom;
@@ -20,10 +20,15 @@ class Auteur{
     public function setPrenom($prenom){
         $this->_prenom = $prenom;
     }
+    public function setBiblio($biblio){
+        $this->_biblio = $biblio;
+    }
     public function afficherBibliographie(){
         $result = "";
         $result .= "<h1>Livres de $this->_prenom $this->_nom </h1>";
-        // $result .= ;
+        foreach ($this->_biblio as $livre){
+            $result .= "$livre <br>";
+        }
         return $result;
     }
     public function __toString(){

@@ -48,7 +48,9 @@ class Livre{
         $result .= ucfirst($this->_titre);
         $result .= " ($this->_paru) : $this->_pages pages / $this->_prix €";
         return $result;
-        // return $this->_titre . $this->_pages . $this->_paru . $this->_prix . $this->_auteur;
+    }
+    public function ajoutLivre(){
+        
     }
 }
 ?>
