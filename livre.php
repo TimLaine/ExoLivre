@@ -52,8 +52,5 @@ class Livre{
         $result .= " ($this->_paru) : $this->_pages pages / $this->_prix €";
         return $result;
     }
-    public function ajoutLivre(){
-        
-    }
 }
 ?>
