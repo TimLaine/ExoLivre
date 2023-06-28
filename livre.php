@@ -43,6 +43,7 @@ class Livre{
     public function setAuteur($auteur){
         $this->_titre = $auteur;
     }
+    // The toString is preformated to allow its use in Class Auteur
     public function __toString(){
         $result = "";
         $result .= ucfirst($this->_titre);

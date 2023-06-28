@@ -23,6 +23,7 @@ class Auteur{
     public function setBiblio($biblio){
         $this->_biblio = $biblio;
     }
+    // Uses the toString in Class Livre to display the bibliography
     public function afficherBibliographie(){
         $result = "";
         $result .= "<h1>Livres de $this->_prenom $this->_nom </h1>";
