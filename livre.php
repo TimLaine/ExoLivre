@@ -4,14 +4,16 @@ class Livre{
     private int $_pages;
     private int $_paru;
     private int $_prix;
-    private string $_auteur;
+    private Auteur $_auteur;
 
-    public function __construct(string $titre,int $pages,int $paru, int $prix, string $auteur){
+    public function __construct(string $titre,int $pages,int $paru, int $prix, Auteur $auteur){
         $this->_titre = $titre;
         $this->_pages = $pages;
         $this->_paru = $paru;
         $this->_prix = $prix;
         $this->_auteur = $auteur;
+        // We use the function from Class Auteur in the construct to add each Book in Auteur $biblio
+        $this->_auteur->ajoutLivre($this);
     }
     public function getTitre(){
         return $this->_titre;

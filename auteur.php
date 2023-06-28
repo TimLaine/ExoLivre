@@ -35,6 +35,10 @@ class Auteur{
     public function __toString(){
         return $this->_nom . $this->_prenom;
     }
+    //This function uses Class Livre to create the _biblio var 
+    public function ajoutLivre(Livre $livre){
+        $this->_biblio [] = $livre;
+    }
 }
 
 ?>
